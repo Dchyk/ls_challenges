@@ -30,7 +30,7 @@ class Series
   end
 
   def slices(slice_size)
-    raise(ArgumentError) if slice_size > @num_string.size # Guard clause
+    raise(ArgumentError) if slice_size > @num_string.size || slice_size <= 0 # Guard clause
 
     output = []
     index = 0
