@@ -44,6 +44,7 @@ class Sieve
       loop do
         break if current_value > @input_value
         current_value += lowest_unmarked
+        next if search_range_hash[current_value] = 'marked'
         search_range_hash[current_value] = 'marked'
       end
 
