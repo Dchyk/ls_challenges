@@ -47,7 +47,7 @@ class Sieve
         search_range_hash[current_value] = 'marked'
       end
 
-      lowest_unmarked = search_range_hash.select { |key, value| key > lowest_unmarked && value == 'unmarked' }.keys.min # this needs work to find the NExt lowest each time
+      lowest_unmarked = search_range_hash.select { |key, value| key > lowest_unmarked && value == 'unmarked' }.keys.min
       break unless search_range_hash.any? { |key, value| key > lowest_unmarked && value == 'unmarked' }
       current_value = lowest_unmarked
     end
