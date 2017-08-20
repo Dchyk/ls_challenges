@@ -51,15 +51,3 @@ class SumOfMultiples
     sum
   end
 end
-
-
-
-
-
-sum = 0 
-
-range.each do |current_num|
-  if multiples.any? { |multiple| current_num % multiple == 0 }
-    sum += current_num
-  end
-end
